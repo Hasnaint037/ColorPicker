@@ -3,7 +3,7 @@ let hello = (url) => {
 };
 let fetchArticles = async () => {
     const u = fetch(
-        "https://newsapi.org/v2/everything?q=business AND blockchain&sortBy=publishedAt&language=en&apiKey=607afe6fe95343d9be98d608b783cb20"
+        "https://newsapi.org/v2/everything?q=business AND blockchain&sortBy=publishedAt&language=en&apiKey=607afe6fe95343d9be98d608b783cb20",{mode:'cors'}
     )
         .then((res) => res.json())
         .then((response) => {
