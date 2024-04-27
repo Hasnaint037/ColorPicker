@@ -3,10 +3,11 @@ let hello = (url) => {
 };
 let fetchArticles = async () => {
     const u = fetch(
-        "http://newsapi.org/v2/everything?q=business AND blockchain&sortBy=publishedAt&language=en&apiKey=607afe6fe95343d9be98d608b783cb20"
+        "https://newsapi.org/v2/everything?q=business AND blockchain&sortBy=publishedAt&language=en&apiKey=607afe6fe95343d9be98d608b783cb20"
     )
         .then((res) => res.json())
         .then((response) => {
+            console.log("Hello")
             response = response.articles.slice(0, 30);
             console.log(response);
             const g = response
